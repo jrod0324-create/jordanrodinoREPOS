@@ -69,13 +69,24 @@
             transition: transform 0.2s ease;
             border: 1px solid #e2e8f0;
             box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover { transform: translateY(-5px); }
-        .project-content { padding: 1.5rem; }
+
+        /* Project Image Styling */
+        .project-image {
+            width: 100%;
+            height: 200px; /* Fixed height for uniformity */
+            object-fit: cover; /* Ensures image fills space without stretching */
+            background-color: #cbd5e1; /* Grey placeholder color */
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .project-content { padding: 1.5rem; flex-grow: 1; }
         .project-content h3 { margin-top: 0; color: var(--header-bg); }
         
-        /* --- Links & Contact Styling --- */
         .contact-links {
             display: flex;
             gap: 1.5rem;
@@ -106,12 +117,7 @@
 
         .social-link:hover { border-color: var(--accent-color); }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            color: #64748b;
-        }
+        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #64748b; }
 
         @media (max-width: 600px) {
             header { flex-direction: column-reverse; text-align: center; gap: 1.5rem; }
@@ -136,37 +142,43 @@
         </p>
     </section>
 
-  <section id="projects">
+    <section id="projects">
         <h2>Featured Projects</h2>
         
         <div class="project-grid">
             <div class="project-card">
+                <img src="brake-bias.jpg" alt="Brake Bias Analysis" class="project-image">
                 <div class="project-content">
                     <h3>Brake Bias Research</h3>
-                    <p>Used MATLAB and Solidworks to analyze balance bar geometry, looking at displacements and different brake bias ratios. Used MATLAB to solve equation for optimal amount of axial tilt applied to the balance bar.</p>
-                    <a href="#" class="https://gowustl-my.sharepoint.com/:p:/g/personal/j_b_rodino_wustl_edu/IQCrBe_aVX4wTY8aaQrkin26ASAw4RP_KBxflb8gJ--rr1Q?e=lidded">View Project &rarr;</a>
+                    <p>Used MATLAB and SolidWorks to analyze balance bar geometry, looking at displacements and different brake bias ratios. Used MATLAB to solve equations for optimal axial tilt.</p>
+                    <a href="https://gowustl-my.sharepoint.com/:p:/g/personal/j_b_rodino_wustl_edu/IQCrBe_aVX4wTY8aaQrkin26ASAw4RP_KBxflb8gJ--rr1Q?e=lidded" target="_blank" class="social-link">View Project &rarr;</a>
                 </div>
             </div>
 
             <div class="project-card">
+                <img src="projector-stand.jpg" alt="Projector Stand Design" class="project-image">
                 <div class="project-content">
-                    <h3>Projector Stand Design 2025</h3>
+                    <h3>Projector Stand Design</h3>
                     <p>Used SolidWorks and FEA simulations to design a 360 degree rotating projector screen with adjustable angles.</p>
-                    <a href="#" class="project-link">View Project &rarr;</a>
+                    <a href="#" class="social-link">View Project &rarr;</a>
                 </div>
             </div>
-              <div class="project-card">
+
+            <div class="project-card">
+                <img src="it-system.jpg" alt="IT Organizational System" class="project-image">
                 <div class="project-content">
                     <h3>Technological Organizational System</h3>
-                    <p>Used Excel Spreadsheets and Action 1 Patch Management and Vunerability Remediation to establish organizational system with updated wiring setups and firmware  </p>
-                    <a href="#" class="project-link">View Project &rarr;</a>
+                    <p>Used Excel and Action 1 Patch Management to establish an organizational system with updated wiring setups and firmware.</p>
+                    <a href="#" class="social-link">View Project &rarr;</a>
                 </div>
             </div>
-              <div class="project-card">
+
+            <div class="project-card">
+                <img src="ferris-wheel.jpg" alt="CAD Ferris Wheel" class="project-image">
                 <div class="project-content">
-                    <h3>Computer Aided Design Ferris Wheel 2025</h3>
-                    <p>Used SolidWorks to create a model with complete drawings and bill of materials of a model ferris wheel</p>
-                    <a href="#" class="project-link">View Project &rarr;</a>
+                    <h3>CAD Ferris Wheel</h3>
+                    <p>Used SolidWorks to create a model with complete drawings and bill of materials of a model ferris wheel.</p>
+                    <a href="#" class="social-link">View Project &rarr;</a>
                 </div>
             </div>
         </div>
@@ -177,8 +189,8 @@
         <p>I am currently looking for new opportunities in mechanical design and engineering. Feel free to reach out!</p>
         <div class="contact-links">
             <a href="resume.pdf" class="btn-resume" target="_blank">View Resume (PDF)</a>
-            <a href="www.linkedin.com/in/jordan-rodino-a27487310" class="social-link" target="www.linkedin.com/in/jordan-rodino-a27487310">LinkedIn</a>
-            <a href="j.b.rodino@wustl.edu" class="social-link">Email</a>
+            <a href="https://www.linkedin.com/in/jordan-rodino-a27487310" class="social-link" target="_blank">LinkedIn</a>
+            <a href="mailto:j.b.rodino@wustl.edu" class="social-link">Email</a>
         </div>
     </section>
 
