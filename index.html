@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Rodino | Portfolio</title>
+    <style>
+        :root {
+            /* NEW COLOR THEME: Nordic Slate */
+            --bg-color: #f8fafc;
+            --header-bg: #1e293b;
+            --text-color: #334155;
+            --accent-color: #0d9488; /* Teal accent */
+            --secondary-color: #ffffff;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* --- Updated Header with Profile Pic --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem 2rem;
+            background-color: var(--header-bg);
+            color: white;
+            border-bottom: 4px solid var(--accent-color);
+            margin-bottom: 2rem;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            margin: 0;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px; /* Soft square look */
+            border: 3px solid var(--accent-color);
+            object-fit: cover;
+            background-color: #475569; /* Placeholder color */
+        }
+
+        section { padding: 0 2rem; }
+
+        h2 {
+            color: var(--header-bg);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 2rem;
+        }
+
+        /* --- Project Card Styles --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: var(--secondary-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--card-shadow);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 { 
+            margin-top: 0; 
+            color: var(--header-bg);
+        }
+        
+        .project-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Mobile responsiveness for header */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-text">
+            <h1>Jordan Rodino</h1>
+            <p class="subtitle">Mechanical Engineer | Problem Solver | Designer</p>
+        </div>
+        <img src="profile.jpg" alt="Jordan Rodino" class="profile-pic">
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm a passionate engineer based in St Louis, Missouri. I possess a strong mechanical aptitude and desire for hands-on work. I have experience in advanced mechanical design and
+            am enthusiastic about applying my knowledge to real-world engineering challenges! When I'm not working on a project, you can find me playing basketball, surfing, or catching up on niche MLB stats and players.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Brake Bias Research</h3>
+                    <p>Used MATLAB and Solidworks to analyze balance bar geometry, looking at displacements and different brake bias ratios. Used MATLAB to solve equation for optimal amount of axial tilt applied to the balance bar.</p>
+                    <a href="#" class="https://gowustl-my.sharepoint.com/:p:/g/personal/j_b_rodino_wustl_edu/IQCrBe_aVX4wTY8aaQrkin26ASAw4RP_KBxflb8gJ--rr1Q?e=HGhbaJ">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Projector Stand Design</h3>
+                    <p>Used SolidWorks and FEA simulations to design a 360 degree rotating projector screen with adjustable angles.</p>
+                    <a href="#" class="project-link">View Project &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
